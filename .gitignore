@@ -1,2 +1,14 @@
-.stack-work/
-*~
+dist
+cabal-dev
+*.o
+*.hi
+*.chi
+*.chs.h
+.virthualenv
+.cabal-sandbox
+cabal.sandbox.config
+.*.sw[po]
+.stack-work
+
+# just create your own with `stack init` to best fit your setup
+stack.yaml
