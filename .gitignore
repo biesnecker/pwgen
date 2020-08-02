@@ -12,3 +12,4 @@ cabal.sandbox.config
 
 # just create your own with `stack init` to best fit your setup
 stack.yaml
+stack.yaml.lock
