@@ -1,0 +1,38 @@
+name: pwgen
+version: 0.1.0.0
+github: "biesnecker/pwgen"
+license: BSD3
+author: "John Biesnecker"
+maintainer: "jbiesnecker@gmail.com"
+copyright: "2020 John Biesnecker"
+
+extra-source-files:
+  - README.md
+  - ChangeLog.md
+
+# Metadata used when publishing your package
+synopsis: A simple commandline password generator.
+category: Utility
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description: A simple commandline password generator. Please see the README on GitHub at <https://github.com/biesnecker/pwgen#readme>
+
+dependencies:
+  - base >= 4.7 && < 5
+  - optparse-applicative >= 0.14
+  - random >= 1.1
+  - vector >= 0.12
+
+executables:
+  pwgen:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+      - -Wall
+      - -Werror
+      - -Wcompat

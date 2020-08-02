@@ -1,0 +1,42 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 82e3dd13fc36b7521d60f0d35cbe7f282e1502d349f5843e999a1548fc392bc3
+
+name:           pwgen
+version:        0.1.0.0
+synopsis:       A simple commandline password generator.
+description:    A simple commandline password generator. Please see the README on GitHub at <https://github.com/biesnecker/pwgen#readme>
+category:       Utility
+homepage:       https://github.com/biesnecker/pwgen#readme
+bug-reports:    https://github.com/biesnecker/pwgen/issues
+author:         John Biesnecker
+maintainer:     jbiesnecker@gmail.com
+copyright:      2020 John Biesnecker
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/biesnecker/pwgen
+
+executable pwgen
+  main-is: Main.hs
+  other-modules:
+      Paths_pwgen
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall -Werror -Wcompat
+  build-depends:
+      base >=4.7 && <5
+    , optparse-applicative >=0.14
+    , random >=1.1
+    , vector >=0.12
+  default-language: Haskell2010
